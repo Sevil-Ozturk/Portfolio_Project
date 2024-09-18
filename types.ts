@@ -15,6 +15,7 @@ export interface Media {
   title: string
   name?: string
   video: boolean
+  tagline:string
   vote_average: number
   vote_count: number
   media_type?: MediaType
@@ -33,6 +34,7 @@ export interface Media {
     cast: Person[]
     crew: Person[]
   }
+ 
   images?: {
     backdrops: Image[]
     posters: Image[]
@@ -64,7 +66,7 @@ export interface Person {
   biography?: string
   external_ids?: ExternalIds
   combined_credits?: {
-    cast?: Media[]
+    cast?: Person[]
     crew?: Media[]
   }
   images?: {
